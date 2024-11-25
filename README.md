@@ -5,7 +5,7 @@ This project focuses on analyzing and predicting flight delays using machine lea
 
 ## Dataset
 ## Source: Flight Delay and Cancellation Dataset (2019-2023)
-## Size: Approximately 3 million rows with 32 features
+## Size: Approximately `3` million rows with `32` features
 ## Key Features:
 DEP_DELAY: Departure delay (minutes)
 ARR_DELAY: Arrival delay (minutes)
@@ -22,32 +22,29 @@ Regression: Predict arrival delay (ARR_DELAY) based on departure delay and other
 ## Preprocessing
 Missing Value Handling:
 Imputed DEP_DELAY and ARR_DELAY with the median.
-Filled delay cause columns with 0 for missing values.
+Filled delay cause columns with `0` for missing values.
 Feature Engineering:
-Encoded CANCELLED as 0 (On-time/Early) and 1 (Cancelled).
-Created additional temporal features like MONTH.
+Encoded CANCELLED as `0` (On-time/Early) and `1`(Cancelled).
 
 ## Models
-Classification Models
-Logistic Regression: Baseline model for binary classification.
-Decision Tree Classifier: Captures non-linear relationships in the data.
-Random Forest Classifier: Ensemble model for robust performance.
-Evaluation Metrics: Confusion Matrix, Precision, Recall, F1-score, Accuracy.
-Regression Models
-Linear Regression: Predicts ARR_DELAY based on DEP_DELAY.
-Decision Tree Regressor: Non-linear regression model.
-Random Forest Regressor: Ensemble regression model.
-Artificial Neural Network (ANN): Multi-layer perceptron model for regression.
-Long Short-Term Memory (LSTM): Sequence model for handling temporal dependencies.
-Evaluation Metrics: Mean Squared Error (MSE), R-squared (R²).
-Visualizations
-Confusion Matrices: Performance evaluation for classification models.
-Actual vs Predicted Plots: Regression performance analysis.
-Training vs Validation Loss: Loss curves for ANN and LSTM models.
-Model Comparison: Bar plots for R² and MSE metrics.
+## Classification Models
+#### Logistic Regression: Baseline model for binary classification.
+#### Decision Tree Classifier: Captures non-linear relationships in the data.
+#### Random Forest Classifier: Ensemble model for robust performance.
+#### Evaluation Metrics: Confusion Matrix, Precision, Recall, F1-score, Accuracy.
+#### Regression Models
+#### Linear Regression: Predicts ARR_DELAY based on DEP_DELAY.
+#### Decision Tree Regressor: Non-linear regression model.
+#### Random Forest Regressor: Ensemble regression model.
+#### Artificial Neural Network (ANN): Multi-layer perceptron model for regression.
+#### Long Short-Term Memory (LSTM): Sequence model for handling temporal dependencies.
+#### Evaluation Metrics: Mean Squared Error (MSE), R-squared (R²).
+## Visualizations
+#### Confusion Matrices: Performance evaluation for classification models.
+#### Actual vs Predicted Plots: Regression performance analysis.
+#### Training vs Validation Loss: Loss curves for ANN and LSTM models.
+#### Model Comparison: Bar plots for R² and MSE metrics.
 
-## Requirements
-Python 3.8+
 ## Libraries
 numpy
 pandas
@@ -59,8 +56,8 @@ Install dependencies using:
 
 ## Results
 Classification
-Logistic Regression achieved 99% accuracy, but due to class imbalance, F1-score for the minority class is low.
+Logistic Regression achieved 85% accuracy, but due to class imbalance, F1-score for the minority class is low.
 Random Forest Classifier showed better handling of imbalanced data with higher recall for cancelled flights.
 Regression
-ANN achieved the best performance with an MSE of 203.66 and R² of 0.91.
-LSTM performed comparably with MSE of 221.40 and R² of 0.90.
+ANN achieved the best performance with an MSE of `203.66` and `R²` of `0.91`.
+LSTM performed comparably with `MSE` of `221.40` and `R²` of `0.90`.
